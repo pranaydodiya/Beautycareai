@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: metizcare-backend
+    env: docker
+    dockerfilePath: ./Beautycareai/backend/Dockerfile
+    dockerContext: ./Beautycareai/backend
+    plan: free
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        fromDatabase:
+          name: metizcare-db
+          property: connectionString
+      - key: PYTHON_SERVICE_URL
+        value: https://your-python-service.fly.dev
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CLERK_SECRET_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+    healthCheckPath: /health
+    autoDeploy: true
+
+databases:
+  - name: metizcare-db
+    plan: free
+    databaseName: metizcare
+    user: metizcare_user

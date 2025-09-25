@@ -1,0 +1,13 @@
+{
+  "name": "python-face-analysis-service",
+  "version": "1.0.0",
+  "description": "Python service for face analysis using DeepFace",
+  "scripts": {
+    "start": "python start_python_service.py",
+    "install-deps": "pip install -r requirements.txt",
+    "dev": "python face_analysis.py"
+  },
+  "keywords": ["face-analysis", "deepface", "skincare", "ai"],
+  "author": "MetizCare",
+  "license": "MIT"
+}

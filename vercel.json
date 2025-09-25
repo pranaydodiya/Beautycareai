@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "Beautycareai/frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/Beautycareai/frontend/build/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/Beautycareai/frontend/build/$1"
+    }
+  ],
+  "env": {
+    "REACT_APP_BACKEND_URL": "@react_app_backend_url",
+    "REACT_APP_CLERK_PUBLISHABLE_KEY": "@react_app_clerk_publishable_key"
+  },
+  "buildCommand": "cd Beautycareai/frontend && npm install && npm run build",
+  "outputDirectory": "Beautycareai/frontend/build",
+  "installCommand": "cd Beautycareai/frontend && npm install"
+}

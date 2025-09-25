@@ -1,0 +1,3 @@
+# This is a placeholder for the user's provided deploy.prototxt file.
+# Please replace the contents of this file with the exact deploy.prototxt from the user if needed.
+# The service will attempt to use this alongside res10_300x300_ssd_iter_140000.caffemodel.

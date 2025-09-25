@@ -1,0 +1,22 @@
+# Metizcare Deployment Instructions
+
+## 🚀 Deployment Order:
+1. Python Service (Fly.io) - Deploy first
+2. Backend (Render) - Deploy second  
+3. Frontend (Vercel) - Deploy last
+
+## 📁 Deployment Packages Ready:
+- deployment\frontend\ - Upload to Vercel
+- deployment\backend\ - Upload to Render
+- deployment\python\ - Upload to Fly.io
+
+## 🔧 Next Steps:
+1. Go to each platform dashboard
+2. Upload the respective package
+3. Set environment variables
+4. Deploy!
+
+## 📞 Support:
+- Check deployment guides in project root
+- Test each service after deployment
+- Monitor logs for any issues
