@@ -3,7 +3,7 @@ import asyncHandler from "express-async-handler";
 // Server-side Gemini proxy to avoid exposing key and CORS issues
 const chat = asyncHandler(async (req, res) => {
   const { messages = [] } = req.body || {};
-  const apiKey = process.env.GEMINI_API_KEY || 'AIzaSyCeDNEs8krUgo4r7JZPTLM5J03Y_tcz4eM';
+  const apiKey = process.env.GEMINI_API_KEY || '';
   if (!apiKey) {
     return res.status(500).json({ error: "AI service not configured" });
   }
