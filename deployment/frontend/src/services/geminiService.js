@@ -2,7 +2,7 @@
 class GeminiService {
   constructor() {
     // Fallback to provided key if env var isn't set
-    this.apiKey = process.env.REACT_APP_GEMINI_API_KEY || "AIzaSyDqepatWNj5NcFQqXCoAOVlkU_hMnRsAW8";
+    this.apiKey = process.env.REACT_APP_GEMINI_API_KEY || "";
     this.baseUrl = 'https://generativelanguage.googleapis.com/v1beta';
   }
 
